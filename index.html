@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>YSL圣罗兰官网</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: none;
+    }
+    .clear:after {
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+    }
+    .header-top{
+        height: 20px;
+        line-height: 20px;
+    }
+    .header-left{
+        float:left;
+    }
+    .header-right{
+        float:right;
+    }
+    .header-left li{
+        float:left;
+        margin-left: 80px;
+        color:rgb(192,192,192)
+    }
+    .header-right li{
+        float:left;
+        margin-right: 80px;
+    }
+
+    .logo {
+        padding-top: 14px;
+        text-align:center;
+    }
+    .nav {
+        float: left;
+        margin-top: 38px;
+    }
+    .nav li {
+        float: left;
+        width: 150px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .nav a {
+        color: rgba(0, 0, 0, 1);
+    }
+    .form {
+        float: right;
+        margin-top: 34px;
+    }
+    .search {
+        float: left;
+        width: 400px;
+        padding: 20px;
+        border: 2px solid rgba(0,0,0,1);
+    }
+    .submit {
+        float: left;
+        width: 60px;
+        height: 60px;
+        border: 2px solid rgb(0,0,0, 1);
+        background: rgba(0,0,0, 1) url(image/search.png) no-repeat center center;
+        margin-right:10px;
+    }
+    #banner{
+        height:550px;
+        width: 1900px;
+        margin-top:100px;
+        position: relative;
+    }
+    #uls{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 1890px;
+        height: 550px;
+        overflow: hidden;
+    }
+
+    #img_ul{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        top: 0;
+        width: 11340px;           
+        list-style: none;
+    }
+    #img_ul li{
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 1890px;
+        height: 550px;
+    }
+    #img_ul li img{
+        width: 1890px;
+        height: 550px;
+    }
+    #litCir_ul{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        right: 10px;
+        bottom: 10px;
+        list-style: none;
+    }
+    #litCir_ul li{
+        margin: 0;
+        padding: 0;
+        float: left;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 50%; 
+        margin-left:10px ;
+        cursor: pointer;
+    }
+
+    li.active{
+        background-color: white;
+    }
+    li.quiet{
+        background-color: #1e90ff;
+    }
+    #buttons{
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    #buttons span{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        margin-top: -20px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: bold;
+        font-family: Simsun;
+        font-size: 30px;
+        border: 1px solid #fff;
+        opacity: 0.3;
+        cursor: pointer;
+        color: #fff;
+        background: black;
+    }
+    #left{
+        left: 5px;
+    }
+    #right{
+        left: 100%;
+        margin-left: -45px;
+    }
+    .title{   
+        text-align: center;
+        padding-top: 60px;
+        height: 150px;
+    }
+    .title p{
+        font-size:50px;
+    }
+    .product{
+        height:600px;
+        text-align:center;
+    }
+    .product-info{
+        float:left;
+        height:500px;
+        width:440px;
+        margin-left:20px;
+    }
+    .product img{
+        width:440px;
+    }
+    .product h2{
+        text-align:left;
+        padding-left:50px;
+        font-size:35px;
+    }
+    .product p{
+        text-align:left;
+        padding-top:25px;
+        padding-left:50px;
+        font-size:20px;
+        color:rgb(41,36,33)
+    }
+    .bgc{
+        margin: 0 auto;
+        background-color:rgb(220,220,220);
+    }
+    .title-two{   
+        text-align: center;
+        padding-top: 50px;
+        height: 150px;
+    }
+    .title-two p{
+        font-size:50px;
+    }
+    .ad{
+        margin-top: 500px;
+        height:600px;
+        width:100%;
+        background:url(image/banner3.jpg) no-repeat center center;
+    }
+    #box{
+        width:850px;
+        height:500px;
+        position:relative;
+        margin-left: 50px;  
+        border: 2px solid ;
+        border-color: #FAFAD2 ;
+        background-color: #680000; 
+        float:left;
+    }
+    #img1{
+        width:300px;
+        height:300px;
+        position:absolute;
+        left:0;
+        top:0;
+    }
+    #slider{
+        width:150px;
+        height:150px;
+        position:absolute;
+        left:0;
+        top:0;
+        background:#CCC;
+        opacity:0.4;
+        cursor: move; 
+        filter:alpha(opacity=40);
+        display: none;
+    }
+    #img2{
+        position:absolute;
+        right:0;
+        top:0; 
+        width:500px;
+        height:500px;
+        overflow:hidden;
+        display: none;
+    }
+    #Bimg{
+        position:absolute;
+        left:0;
+        top:0;
+    }
+    #img3{
+        float: right;
+        margin-right: 200px;
+        width: 200px;
+        height:200px;
+    }
+    .register1{
+        float: left;
+        width: 300px;
+        height: 50px;
+        margin-left: 50px;
+    }
+    .out{
+        border: 1px solid;
+        border-color: #C0C0C0       ;
+        width: 300px;
+        height: 50px;
+    }
+    .name{
+        float: left;
+        letter-spacing:7px;
+        line-height: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .password{
+        float: left;
+        line-height: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #box input{
+        border: 0;
+        line-height: 50px;
+    }
+    .out input:focus{
+        outline: 0;
+    }
+    .last{
+        border: 1px solid;
+        border-color: #C0C0C0;
+        width: 300px;
+        height: 50px;
+        background-color: black;
+        color: white;
+    }
+    .register1 input{
+        background-color:  #680000;
+    }
+    .after{
+        height: 25px;
+    }
+    .success1,.success2,.success3{
+        line-height: 50px;
+        color: #FF0000;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .footer {
+        height: 307px;
+        padding-top: 18px;
+        background: rgba(58, 58, 58, 1);
+        text-align: center;
+    }
+    .footer h4 {
+        padding: 38px 0 23px;
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+    }
+    .footer ul {
+        display: inline-block;
+    }
+    .footer li {
+        float: left;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        padding: 0 12px;
+        border-right: 2px solid rgba(255, 255, 255, 1);
+    }
+    .footer li.last {
+        border: none;
+    }
+    .footer p {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        margin-top: 65px;
+    }
+    #btn{
+        width: 100px;
+        height: 100px;
+        position:fixed;
+        bottom:10px;
+        right: 20px;
+        display: none;
+        font-size: 20px;
+        background-color: #CC6699;
+        border-color: #CC6699;
+    }
+</style>
+<body>   
+     <div class="header">
+        <div class="header-top">
+            <div class="header-left clear">
+            <ul>
+                <li>专柜查询</li>
+                <li>客服中心</li>
+            </ul>
+            </div>
+            <div class="header-right clear">
+                <ul>
+                    <li>订阅电子杂志</li>
+                    <li>登录与注册</li>
+                    <li>购物袋</li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo">
+        <img src="image/logo.jpg" alt="logo图" class="logo" /></div>
+        <hr/>
+        <div class="header-bottom">
+            <ul class="nav">
+                <li><a href="#">圣诞礼盒</a></li>
+                <li><a href="#">彩妆</a></li>
+                <li><a href="#">香水</a></li>
+                <li><a href="#">护肤</a></li>
+                <li><a href="#">品牌故事</a></li>
+                <li><a href="#">会员中心</a></li>
+                <li><a href="#">私人定制服务</a></li>
+            </ul>
+            <form class="form clear">
+                <input type="text" placeholder="天鹅绒唇釉" class="search" />
+                <input type="button" class="submit" />
+            </form>
+        </div>
+     </div>
+    <div></div>
+     <div id= "banner">
+        <div id="uls">
+            <ul id="img_ul">
+                <li><img src="image\banner1.jpg"/></li>
+                <li><img src="image\banner2.jpg"/></li>
+                <li><img src="image\banner4.jpg"/></li>
+                <li><img src="image\banner5.jpg"/></li>
+                <li><img src="image\banner6.jpg"/></li>
+            </ul>
+            <ul id='litCir_ul'></ul>
+        </div>
+        <div id="buttons">
+            <span id="left">&lt;</span>
+            <span id="right">&gt;</span>
+        </div>
+    </div>
+    <div class="bgc">
+        <div class="title">
+            <h2>YSL FAVORITES
+                <p>明星产品</p>
+            </h2>
+        </div>
+        <div class="product">
+        <ul>
+            <li>
+                <div class="product-info">
+                    <img src="image/5.jpg" alt="商品"  />
+                    <h2>圣诞礼盒</h2>
+                    <p>圣罗兰圣诞限定香色肆意礼盒</p>
+                </div>
+            </li>
+            <li>
+                <div class="product-info">
+                    <img src="image/6.jpg" alt="商品"  />
+                    <h2>彩妆</h2>
+                    <p>高定设计，缎光撩人</p>
+                </div>
+            </li>
+            <li>
+                <div class="product-info">
+                    <img src="image/7.jpg" alt="商品"  />
+                    <h2>香水</h2>
+                    <p>馥奇花香，肆意如我</p>
+                </div> 
+            </li>
+            <li>
+                <div class="product-info">
+                    <img src="image/8.jpg" alt="商品"  />
+                    <h2>护肤</h2>
+                    <p>YSL夜皇后精华全新上市，重塑肌能平衡，一瓶嫩透亮</p>
+                </div>
+            </li>    
+        </ul>   
+        </div>
+    </div>
+    <div class="bgc">
+        <div class="title">
+            <h2>EXCLUSIVE SERVICES
+                <p>官网专项服务</p>
+            </h2>
+        </div>
+        <div>
+            <div id="box">
+            <div id="img1">
+                <img src="image\1.jpg" width="300" height="300"/>
+                <div id="slider"></div>
+                <h3>ROUGE PUR COUTURE 2 LIPS SET XMAS</h3>
+                <h2>圣罗兰圣诞限定2支装礼盒</h2>
+                <h1>￥700</h1>
+            </div>
+            <div id="img2">
+                <img src="image\2.jpg"  id="Bimg"/>
+            </div>  
+        </div>
+        <div id='box'>
+            <h1>注册会员立享：</h1>
+            <ul>
+                <li>臻选YSL圣诞明星单品， 镌刻专属印记</li>
+                <li>试用体验明星产品</li>
+                <li>多元维度会员权益，给你花式宠爱</li>
+                <br>
+                <br>
+            </ul>
+            <div class="register1">
+                <form id="all">
+                    <div class="out">
+                        <div class="name">用户名</div>
+                        <input id="CSDN_NAME" type = "text" name = "" value = "" / onfocus="tips1();" onblur="tips2();">
+                    </div>
+                    <div class="after"></div>
+                    <div class="out">
+                        <div class="password">设置密码</div>
+                        <input id="CSDN_PASSWORD" type = "password" name = "" value = "" / onfocus="tips3();" onblur="tips4();">
+                    </div>
+                    <div class="after"> </div>
+                </form>
+                <button class="last" onclick="tips5();">立即注册</button>
+            </div>
+            <div id="img3">
+                <img src="image\3.jpg" >
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="ad"></div>
+    <div class="footer">
+        <h4>彩妆</h4>
+        <ul class="clear">
+            <li>唇部</li>
+            <li>面部</li>
+            <li>眼部</li>
+            <li >套装及工具</li>
+        </ul>
+        <h4>护肤</h4>
+        <ul class="clear">
+            <li>按产品分类</li>
+            <li>按功能分类</li>
+            <li>拍卖</li>
+            <li >按系列分类</li>
+        </ul>
+        <p>国家药监局提示您：宣称用于祛斑美白，防晒，染发，烫发等的化妆品为特殊用途化妆品，产品标签上应标注“国妆特字”的标准文号</p>
+    </div>
+    <input type="button" name="" id="btn" value="回到顶部" />
+</body>
+    <script type="text/javascript">
+        var parent = document.getElementById("banner");
+        var img_ul = document.getElementById("img_ul");
+        var litCir_ul = document.getElementById("litCir_ul");
+        var buttons = document.getElementById("buttons");
+        var img1 = document.getElementById('img1');
+        var img2 = document.getElementById('img2');
+        var slider = document.getElementById('slider');
+        var box = document.getElementById('box');
+        var Bimg = document.getElementById('Bimg');
+        var user=document.getElementById("out");
+        var p = document.createElement("p");
+        var tip=document.getElementsByClassName('after');
+        var over=document.getElementsByClassName('register');
+        var name1 = document.getElementsByTagName("input")[0];
+        var password1 = document.getElementsByTagName("input")[1];
+        var text1 = document.createTextNode("支持中文数字");
+        var text2 = document.createTextNode("用户名不能为空");
+        var text3 = document.createTextNode("建议使用两种字符组合");
+        var text4 = document.createTextNode("密码不能为空");
+        var btn=document.getElementById('btn');
+        var cLis =litCir_ul.children;
+        var len = img_ul.children.length;     //图片张数
+        var width = parent.offsetWidth;       //每张图片的宽度
+        var rate = 15;                        //一张图片的切换速度， 单位为px
+        var times = 1;                        //切换速度的倍率
+        var gap = 2000;                       //自动切换间隙， 单位为毫秒
+        var timer = null;                     //初始化一个定时器
+        var picN = 0;                         //当前显示的图片下标
+        var cirN = 0;                         //当前显示图片的小圆点下标
+        var temp;
+        for (var i=0; i<len; i++){
+            var a_li = document.createElement("li");
+            a_li.className = 'quiet';
+            litCir_ul.appendChild(a_li);
+        }
+        litCir_ul.children[0].className = "active";
+        function Roll(distance){                                         
+            clearInterval(img_ul.timer);                                     
+            var speed = img_ul.offsetLeft < distance ?  rate : (0-rate);     
+            img_ul.timer = setInterval(function(){                           
+                img_ul.style.left = img_ul.offsetLeft + speed + "px";                
+                var leave = distance - img_ul.offsetLeft;                    
+                if (Math.abs(leave) <= Math.abs(speed)) {                    
+                    clearInterval(img_ul.timer);
+                    img_ul.style.left = distance + "px";
+                }
+            },10);
+        }
+        img_ul.appendChild(img_ul.children[0].cloneNode(true));
+        function autoRun(){
+            picN++;
+            cirN++;
+            if(picN > len){                  
+                img_ul.style.left = 0;       
+                picN = 1;                  
+            }
+            Roll(-picN*width);
+            if(cirN > len-1){               
+                cirN = 0;                 
+            }
+            for(var i=0; i<len; i++){
+                cLis[i].className = "quiet";
+            }
+            cLis[cirN].className = "active";
+        }
+        for(var i=0; i<len; i++){
+            cLis[i].index = i;
+            cLis[i].onmouseover = function(){
+                for(var j=0; j<len; j++){
+                    cLis[j].className = "quiet";
+                }
+                this.className = "active";
+                temp = cirN;
+                picN = cirN = this.index;
+                times = Math.abs(this.index - temp);  
+                rate = rate*times;                    
+                Roll(-this.index * width);
+                rate = 15;
+            }
+        }
+        parent.onmouseover = function(){
+            clearInterval(timer);
+            buttons.style.display = 'block';
+        }
+        parent.onmouseout = function(){
+            timer = setInterval(autoRun, gap);
+            buttons.style.display = 'none';
+        }
+        buttons.children[0].onclick = function(){ 
+            picN--;
+            cirN--;
+            if(picN < 0){                               
+                img_ul.style.left = -len*width + "px";  项处
+                picN = cirN = len-1;
+            }
+            Roll(-picN*width);
+            if(cirN < 0){
+                cirN = len-1;
+            }
+            for(var i=0; i<len; i++){
+                cLis[i].className = "quiet";
+            }
+            cLis[cirN].className = "active";
+        }
+        buttons.children[1].onclick = autoRun;
+        img1.onmouseover = function () {
+            slider.style.display = 'block';
+            img2.style.display = 'block';
+        }
+        img1.onmouseout = function () {
+            slider.style.display = 'none';
+            img2.style.display = 'none';
+        }
+        img1.onmousemove = function(ev){
+            //slider
+            var ol = ev.clientX - box.offsetLeft - 150/2;
+            var ot = ev.clientY - box.offsetTop - 150/2;
+            ol = ol>150?150:ol<0?0:ol;
+            ot = ot>150?150:ot<0?0:ot;
+            slider.style.left = ol + 'px';
+            slider.style.top = ot + 'px';
+            //Bimg
+            var Bl = -ol*400/150;
+            var Bt = -ot*400/150;
+            Bimg.style.left = Bl + 'px';
+            Bimg.style.top = Bt + 'px';
+        }
+        function tips1(){
+            p.innerHTML="";
+            p.appendChild(text1);
+            tip[0].appendChild(p);
+        }
+        function tips2(){
+            p.innerHTML="";
+            p.appendChild(text2);
+            tip[0].appendChild(p);
+        }
+        function tips3(){
+            p.innerHTML="";
+            p.appendChild(text3);
+            tip[1].appendChild(p);
+        }
+        function tips4(){
+            p.innerHTML="";
+            p.appendChild(text4);
+            tip[1].appendChild(p);
+        }   
+        function tips5(){
+            p.innerHTML="";
+            document.getElementsByClassName("success1")[0].innerHTML="注册成功！";
+            document.getElementsByClassName("success2")[0].innerHTML="用户名："+name1.value;
+            document.getElementsByClassName("success3")[0].innerHTML="密码："+password1.value;
+        }
+        window.onscroll=function(){
+            var st=document.documentElement.scrollTop
+            console.log(st)
+            if(st>300){
+                btn.style.display="block"
+            }else{
+                btn.style.display="none"
+            }
+        }
+        btn.onclick=function(){
+            document.documentElement.scrollTop=0
+        }   
+    </script>
+</html>
